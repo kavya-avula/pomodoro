@@ -1,0 +1,165 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+    background-color: var(--pomodoro);
+  }
+  
+  .timer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    align-items: center;
+    z-index: 2;
+    border-radius: 32px;
+    width: 250px;
+    height: 250px;
+  }
+  
+  .display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  button {
+    background-color: var(--primary);
+    color: #676e6e;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .time {
+    font-weight: 600;
+    font-size: 48px;
+  }
+  .options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+  }
+  
+  .options .title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .inputs {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .mode-button {
+    background-color: var(--secondary);
+    color: #c2aab0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+  }
+  
+  .mode-button.active {
+    background-color: var(--green);
+  }
+  
+  button:disabled {
+    opacity: 0.5;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .info div {
+    margin-bottom: 10px;
+  }
+  
+  .time span {
+    font-size: 2.5rem;
+    margin-right: 10px;
+  }
+  
+  progress {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    appearance: none;
+  }
+  
+  progress::-webkit-progress-bar {
+    height: 10px;
+    background-color: #b97b7b;
+    border-radius: 10px;
+  }
+  
+  progress::-webkit-progress-value {
+    background-color: var(--primary);
+    border-radius: 10px;
+  }
+  
+  @media (min-width: 500px) {
+    .timer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .display {
+      flex: 1;
+      margin-right: 20px;
+    }
+  
+    .options {
+      border-top: none;
+      padding-top: 0;
+    }
+  
+    .inputs {
+      flex-direction: column;
+    }
+  
+    .mode-button {
+      margin-bottom: 10px;
+    }
+  }
+  
+  :root {
+    --primary: #4285f4;
+    --secondary: #6c757d;
+    --pomodoro: rgb(52, 44, 53);
+    --green: #34a853;
+    --red: #ea4335;
+  }
+  
+  .circular-progress {
+    width: 500px;
+    position: absolute;
+  
+    height: 500px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(220, 218, 220); /* Background color of the progress bar */
+   }
+   
+   .inner-circle {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: #fff; /* Inner circle color */
+   }
+   
+   
